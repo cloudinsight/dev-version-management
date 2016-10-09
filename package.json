@@ -1,0 +1,38 @@
+{
+  "name": "dev-version-management",
+  "version": "0.0.0",
+  "description": "Cloudinsight Dev cleanup",
+  "main": "app.js",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "dist": "NODE_ENV=production webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloudinsight/dev-version-management.git"
+  },
+  "keywords": [
+    "cloudinsight"
+  ],
+  "author": "wyvernnot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cloudinsight/dev-version-management/issues"
+  },
+  "homepage": "https://github.com/cloudinsight/dev-version-management#readme",
+  "dependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "datatables.net": "^1.10.12",
+    "jquery": "^3.1.1",
+    "moment": "^2.15.1",
+    "style-loader": "^0.13.1",
+    "underscore": "^1.8.3",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2",
+    "wilddog": "^2.1.0"
+  }
+}
