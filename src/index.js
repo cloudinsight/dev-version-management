@@ -22,7 +22,7 @@ $(function () {
       wilddog
         .auth()
         .signInWithCustomToken(keyInput)
-        .then(()=>{
+        .then(()=> {
           localStorage.setItem('key', keyInput);
           $("#login").attr('disabled', 'disabled').text('登录成功');
         })
@@ -66,8 +66,10 @@ $(function () {
                 .text('删除')
                 .attr('disabled', !rowData.BUILD_TIME) // 如果没有 BuiltTime 就无法删除
                 .click(function () {
-                  ref.ref(rowData.key).remove();
-                  console.log(rowData.key)
+                  var startWithV = rowData.GIT_BRANCH && rowData.GIT_BRANCH[0] === 'v';
+                  if (!startWithV || window.confirm('确认删除这个版本吗？')) {
+                    ref.ref(rowData.key).remove();
+                  }
                 })
             )
         },
